@@ -27,19 +27,6 @@ const reducerCart = (state = initialState, action) => {
         total: state.total + price,
       };
     case REMOVE_COURSE_CART:
-      // const filterCourses = state.cartCourses.filter(
-      //   (course) => course.id !== action.prodId
-      // );
-      // const totalSumCourses = filterCourses.reduce(
-      //   (accumulator, currentValue) => accumulator + currentValue.price,
-      //   0
-      // );
-      // return {
-      //   ...state,
-      //   cartCourses: filterCourses,
-      //   total: totalSumCourses,
-      // };
-
       const indexResult = state.cartCourses.findIndex(
         (course) => course.id === action.prodId
       );

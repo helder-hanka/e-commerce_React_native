@@ -5,7 +5,7 @@ const COURSES = [
     description:
       "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Beatae, consequatur dolor sequi provident possimus sed ad qui ipsum similique odio iste molestias praesentium nemo ut facere, consectetur error in voluptate!",
     image:
-      "https://cdn.pixabay.com/photo/2016/10/09/08/32/digital-marketing-1725340_960_720.jpg",
+      "https://media.istockphoto.com/id/1439649485/fr/photo/planche-de-bois-et-personnes-miniatures-avec-texte-javascript-sur-fond-jaune.jpg?b=1&s=170667a&w=0&k=20&c=cMe5Te0DN8C96ZRqieXahQguji91ibZ0CPHzfwpWNi4=",
     price: 99.99,
     selected: false,
     instructorId: "2",

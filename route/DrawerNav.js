@@ -56,7 +56,7 @@ const DrawerNav = () => {
         }}
       />
       <Drawer.Screen
-        name="Carts"
+        name="Cart"
         component={CartStackNav}
         options={{
           title: "Panier",

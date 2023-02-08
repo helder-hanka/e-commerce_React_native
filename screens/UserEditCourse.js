@@ -89,6 +89,7 @@ const UserEditCourse = ({ route, navigation }) => {
           onKeyStroke={(text) => inputHandler("desc", text)}
           multiline
           numberOfLines={5}
+          maxLength={40}
         />
         <BtnForm
           handlePress={handlePress}

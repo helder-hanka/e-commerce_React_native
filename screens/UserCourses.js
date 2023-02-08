@@ -33,11 +33,7 @@ const UserCourses = ({ navigation }) => {
       renderItem={({ item }) => (
         <View style={styles.courseContainer}>
           <View style={styles.courseInfo}>
-            <Text
-              // Pas le droit de passé sur une 2eme ligne
-              numberOfLines={1}
-              style={styles.courseText}
-            >
+            <Text numberOfLines={1} style={styles.courseText}>
               {item.title}
             </Text>
             <Text style={styles.coursePrice}> {item.price} </Text>

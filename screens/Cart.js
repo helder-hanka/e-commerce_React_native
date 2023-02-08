@@ -18,10 +18,6 @@ const Cart = () => {
   const cartCourses = useSelector((state) => state.cart.cartCourses);
   const total = useSelector((state) => state.cart.total);
 
-  // const deleteCourse = (courseId) => {
-  //   dispatch(remouveCourseCart(courseId));
-  // };
-
   const handlePayment = (cartCourses, total) => {
     dispatch(addPayment(cartCourses, total));
     alert("Paiment effectué");
@@ -39,7 +35,6 @@ const Cart = () => {
                 title={item.title}
                 price={item.price}
                 onDelete={() => dispatch(remouveCourseCart(item.id))}
-                // onDelete={() => deleteCourse(item.id)}
               />
             )}
           />
