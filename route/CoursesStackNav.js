@@ -11,23 +11,7 @@ const cousesStackNavigator = createStackNavigator();
 
 export const CousesStackNavigator = () => {
   return (
-    <cousesStackNavigator.Navigator
-      // screenOptions={({ navigation }) => ({
-      //   headerStyle: { backgroundColor: globalStyles.green },
-      //   headerTitleStyle: { fontWeight: "bold" },
-      //   headerTintColor: globalStyles.white,
-      //   headerRight: () => (
-      //     <HeaderButtons HeaderButtonComponent={CustomHeaderIcon}>
-      //       <Item
-      //         title="Panier"
-      //         iconName="shopping-cart"
-      //         onPress={() => navigation.navigate("Cart")}
-      //       />
-      //     </HeaderButtons>
-      //   ),
-      // })}
-      screenOptions={{ headerShown: false }}
-    >
+    <cousesStackNavigator.Navigator screenOptions={{ headerShown: false }}>
       <cousesStackNavigator.Screen name="Landing" component={Landing} />
       <cousesStackNavigator.Screen
         name="Details"
@@ -36,7 +20,6 @@ export const CousesStackNavigator = () => {
           title: route.params.title,
         })}
       />
-      {/* <cousesStackNavigator.Screen name="Cart" component={Cart} /> */}
     </cousesStackNavigator.Navigator>
   );
 };

@@ -16,11 +16,6 @@ const UserEditCourse = ({ route, navigation }) => {
     state.courses.loggedInMemberCourses.find((course) => course.id === courseId)
   );
 
-  // const [title, setTitle] = useState(course ? course.title : "");
-  // const [img, setImg] = useState(course ? course.image : "");
-  // const [price, setPrice] = useState(course ? course.price : "");
-  // const [desc, setDesc] = useState(course ? course.description : "");
-
   formInitialState = {
     inputValues: {
       title: course ? course.title : "",
@@ -45,17 +40,14 @@ const UserEditCourse = ({ route, navigation }) => {
   const handlePress = () => {
     const { title, img, price, desc } = formState.inputValues;
     if (courseId) {
-      // mise à jour
       dispatch(editCourse(courseId, title, img, desc));
     } else {
-      // création
       dispatch(createCourse(title, desc, img, +price));
     }
     navigation.goBack();
   };
 
   const inputHandler = (inputName, text) => {
-    // dispatch l'action
     let isValidInput = false;
     if (text.length > 0) {
       isValidInput = true;
@@ -110,60 +102,6 @@ const UserEditCourse = ({ route, navigation }) => {
       </View>
     </ScrollView>
   );
-
-  // return (
-  //   <ScrollView>
-  //     <View style={styles.formContainer}>
-
-  //       <View style={styles.formControl}>
-  //         <Text style={styles.label}>Titre</Text>
-  //         <TextInput
-  //           style={styles.input}
-  //           value={title}
-  //           onChangeText={(text) => setTitle(text)}
-  //         />
-  //       </View>
-
-  //       <View style={styles.formControl}>
-  //         <Text style={styles.label}>Image</Text>
-  //         <TextInput
-  //           style={styles.input}
-  //           value={img}
-  //           onChangeText={(text) => setImg(text)}
-  //         />
-  //       </View>
-  //       {
-  //         course ? null : (
-  //           <View style={styles.formControl}>
-  //             <Text style={styles.label}>Prix {price}</Text>
-  //             <TextInput
-  //               style={styles.input}
-  //               keyboardType="decimal-pad"
-  //               value={price}
-  //               onChangeText={(text) => setPrice(text)}
-  //             />
-  //           </View>
-  //         )
-  //       }
-
-  //       <View style={styles.formControl}>
-  //         <Text style={styles.label}>Information</Text>
-  //         <TextInput
-  //           style={styles.input}
-  //           value={desc}
-  //           onChangeText={(text) => setDesc(text)}
-  //           multiline
-  //           numberOfLines={5}
-  //         />
-  //       </View>
-  //       <TouchableOpacity onPress={handlePress}>
-  //         <View style={styles.btnContainer}>
-  //           <Text style={styles.btnText}>Valider</Text>
-  //         </View>
-  //       </TouchableOpacity>
-  //     </View>
-  //   </ScrollView>
-  // );
 };
 
 export default UserEditCourse;
@@ -175,30 +113,4 @@ const styles = StyleSheet.create({
     padding: 20,
     margin: 20,
   },
-  // formControl: {
-  //   width: "100%",
-  // },
-  // label: {
-  //   marginVertical: 15,
-  //   color: globalStyles.green,
-  //   fontWeight: "bold",
-  // },
-  // input: {
-  //   paddingHorizontal: 9,
-  //   paddingVertical: 9,
-  //   borderColor: globalStyles.green,
-  //   borderWidth: 0.5,
-  //   borderRadius: 6,
-  // },
-  // btnContainer: {
-  //   borderRadius: 6,
-  //   paddingVertical: 9,
-  //   paddingHorizontal: 25,
-  //   backgroundColor: globalStyles.orange,
-  //   marginTop: 20,
-  // },
-  // btnText: {
-  //   fontSize: 19,
-  //   textAlign: "center",
-  // },
 });

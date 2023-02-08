@@ -18,11 +18,6 @@ const initialState = {
 const reducerCourses = (state = initialState, action) => {
   switch (action.type) {
     case ADD_TO_CART:
-      // const indexCourseToModify = state.existingCourses.findIndex(
-      //   (course) => course.id === action.course.id
-      // );
-      // const copyExistingCourse = [...state.existingCourses];
-      // copyExistingCourse[indexCourseToModify].selected = true;
       const copyExistingCourse = indexCourseToModify(
         state.existingCourses,
         action.course.id,
@@ -34,13 +29,6 @@ const reducerCourses = (state = initialState, action) => {
         loggedInMemberCourses: state.loggedInMemberCourses,
       };
     case REMOVE_COURSE_CART:
-      // const indexCourseToCourse = state.existingCourses.findIndex(
-      //   (course) => course.id === action.prodId
-      // );
-
-      // const newExistingCourseArray = [...state.existingCourses];
-      // newExistingCourseArray[indexCourseToCourse].selected = false;
-
       const recoverExistingCourse = indexCourseToModify(
         state.existingCourses,
         action.prodId,
@@ -124,9 +112,6 @@ const indexCourseToModify = (
   actionCourseId,
   selected
 ) => {
-  // const indexCourseToModify = stateExistingCourses.findIndex(
-  //   (course) => course.id === actionCourseId
-  // );
   const indexCourseToModify = courseFindIndex(
     stateExistingCourses,
     actionCourseId

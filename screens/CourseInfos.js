@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 import {
   Image,
   ScrollView,
@@ -25,12 +25,6 @@ const CourseInfos = ({ navigation, route }) => {
     navigation.goBack();
     alert("Formation ajoutée au panier");
   };
-
-  //   useEffect(() => {
-  //     navigation.setOptions({
-  //       title: selectedCourse.title,
-  //     });
-  //   }, [navigation]);
 
   return (
     <View>

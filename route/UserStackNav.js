@@ -16,7 +16,6 @@ export const UserNavigator = () => {
         headerTitleStyle: { fontWeight: "bold" },
         headerTintColor: globalStyles.white,
       }}
-      // screenOptions={{ headerShown: false }}
     >
       <UserStackNavigator.Screen
         name="Courses"
